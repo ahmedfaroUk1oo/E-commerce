@@ -27,7 +27,7 @@ function App() {
   let {token,setToken} = useContext(tokenContext);
 
   const routes = createBrowserRouter([
-    {path : "" , element : < LayOut /> , children : [
+    {path : "E-commerce" , element : < LayOut /> , children : [
       {index : true , element : <ProtectedAuth><Login /></ProtectedAuth>},
       {path : "home" ,element :<Protected><Home /></Protected>},
       {path : "brands" ,element :<Protected><Brands /></Protected>},
