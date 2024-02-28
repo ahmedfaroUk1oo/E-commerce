@@ -27,7 +27,7 @@ function App() {
   let {token,setToken} = useContext(tokenContext);
 
   const routes = createBrowserRouter([
-    {path : "E-commerce" , element : < LayOut /> , children : [
+    {path : "" , element : < LayOut /> , children : [
       {index : true , element : <ProtectedAuth><Login /></ProtectedAuth>},
       {path : "home" ,element :<Protected><Home /></Protected>},
       {path : "brands" ,element :<Protected><Brands /></Protected>},
@@ -39,6 +39,8 @@ function App() {
       {path : "allorders" ,element :<Protected><MyOrders /></Protected>},
       {path : "details/:id" ,element :<Protected><ProductDetails /></Protected>},
       {path : "login" ,element :<ProtectedAuth><Login /></ProtectedAuth>},
+      {path : "E-commerce" ,element :<ProtectedAuth><Login /></ProtectedAuth>},
+      {path : "E-commerce/register" ,element :<ProtectedAuth><Register /></ProtectedAuth>},
       {path : "forgetpassword" ,element :<ProtectedAuth><ForgetPassword /></ProtectedAuth>},
       {path : "verifycode" ,element :<ProtectedAuth><Verify /></ProtectedAuth> },
        { path : "newpassword" ,element :<ProtectedAuth><NewPassword /></ProtectedAuth> },
