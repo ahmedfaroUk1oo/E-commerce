@@ -28,7 +28,6 @@ function App() {
 
   const routes = createBrowserRouter([
     {path : "" , element : < LayOut /> , children : [
-      {index : true , element : <ProtectedAuth><Login /></ProtectedAuth>},
       {path : "home" ,element :<Protected><Home /></Protected>},
       {path : "brands" ,element :<Protected><Brands /></Protected>},
       {path : "categories" ,element :<Protected><Categories /></Protected>},
